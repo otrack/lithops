@@ -3,7 +3,7 @@ from creson.factory import Factory
 
 def my_function(x):
     f = Factory("34.94.237.246:11222")
-    c = f.createCounter("async")
+    c = f.createCounter("cnt")
     return c.increment(x)
 
 

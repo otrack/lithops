@@ -3,7 +3,7 @@ from creson.factory import Factory
 
 def my_map_function(id, x):
     f = Factory("34.94.237.246:11222")
-    c = f.createCounter("map")
+    c = f.createCounter("cnt")
     print("I'm activation number {}".format(id))
     return c.increment(x)
 
