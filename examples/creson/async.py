@@ -2,7 +2,7 @@ import pywren_ibm_cloud as pywren
 from creson.factory import Factory
 
 def my_function(x):
-    f = Factory()
+    f = Factory("34.94.237.246:11222")
     c = f.createCounter("async")
     return c.increment(x)
 
