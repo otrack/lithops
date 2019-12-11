@@ -40,8 +40,8 @@ pymongo == 3.7.2
 redis == 2.10.6
 pika == 0.13.0
 # pin elasticsearch at 5.x, for 6.x use python:3.7 runtime
-elasticsearch >=5.0.0,<6.0.0
-cassandra-driver == 3.16.0
+# elasticsearch >=5.0.0,<6.0.0 FIXME very slow to build ..
+# cassandra-driver == 3.16.0
 
 # creson
 creson == 0.0.1
