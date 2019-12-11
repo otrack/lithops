@@ -6,7 +6,7 @@ ENV FLASK_PROXY_PORT 8080
 
 COPY requirements.txt requirements.txt
 
-RUN pip install --upgrade pip setuptools six && pip install --no-cache-dir -r requirements.txt
+RUN pip3 install --upgrade pip setuptools six && pip install --no-cache-dir -r requirements.txt
 
 # create action working directory
 RUN mkdir -p /action
