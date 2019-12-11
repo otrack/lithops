@@ -44,4 +44,4 @@ pika == 0.13.0
 # cassandra-driver == 3.16.0
 
 # creson
-creson == 0.0.1
+creson == 0.0.2
