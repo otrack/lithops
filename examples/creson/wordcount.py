@@ -1,5 +1,4 @@
 import pywren_ibm_cloud as pywren
-from jpype import *
 from jpype import java
 from creson.factory import Factory
 
@@ -12,25 +11,23 @@ iterdata = ['https://archive.ics.uci.edu/ml/machine-learning-databases/bag-of-wo
 
 
 def my_map_function(url):
-    print('I am processing the object from {}'.format(url.path))
-
-    f = Factory()
-    results = f.createMap("results")
-    counter = java.util.HashMap()
-
-    data = url.data_stream.read()
-    for line in data.splitlines():
-        for word in line.decode('utf-8').split():
-                counter[word] = 1
-
-    results.mergeAll(counter,f.Package.Sum())
+    f = Factory("34.94.237.246:11222")
+    results = f.createMap("bloup")
+    # counter = java.util.HashMap()
+    #
+    # data = url.data_stream.read()
+    # for line in data.splitlines():
+    #     for word in line.decode('utf-8').split():
+    #             counter[word] = 1
+    #
+    # results.mergeAll(counter,f.Package.Sum())
     return 1
 
 if __name__ == "__main__":
-    pw = pywren.local_executor()
+    pw = pywren.ibm_cf_executor()
     pw.map(my_map_function, iterdata)
     result = pw.get_result()
 
-    f = Factory()
-    results = f.createMap("results")
-    print(results.size())
+    # f = Factory("34.94.237.246:11222")
+    # results = f.createMap("results")
+    # print(results.size())

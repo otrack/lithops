@@ -71,4 +71,4 @@ if __name__ == "__main__":
     pw = pywren.ibm_cf_executor()
     pw.map_reduce(my_map_function, iterdata, my_reduce_function, chunk_size=chunk_size)
     result = pw.get_result()
-    print("Done!")
+    print(len(result))

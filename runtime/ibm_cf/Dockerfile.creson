@@ -27,7 +27,7 @@ RUN set -e; \
         vim \
         && rm -rf /var/lib/apt/lists/*
 
-RUN apt-cache search linux-headers-generic
+# RUN apt-cache search linux-headers-generic
 
 COPY requirements.txt requirements.txt
 
